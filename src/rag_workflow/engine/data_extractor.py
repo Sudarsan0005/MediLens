@@ -29,7 +29,7 @@ class DataExtractor(BaseModel):
         except:
             raise ChunkException("Error while making chunks with unstructured")
 
-    def extract_table(self,chunks:List=[]):
+    def extract_table(self,chunks:List=None):
         try:
             for chunk in chunks:
                 if "Table" in str(type(chunk)):
@@ -38,7 +38,7 @@ class DataExtractor(BaseModel):
         except:
             raise ChunkException("Error while extracting tables from chunks")
 
-    def extract_text(self,chunks:List=[]):
+    def extract_text(self,chunks:List=None):
         try:
             for chunk in chunks:
                 if "CompositeElement" in str(type((chunk))):
@@ -46,7 +46,7 @@ class DataExtractor(BaseModel):
             return self.text
         except:
             raise ChunkException("Error while extracting text from chunks")
-    def extract_image(self,chunks:List=[]):
+    def extract_image(self,chunks:List=None):
         try:
             for chunk in chunks:
                 if "CompositeElement" in str(type(chunk)):

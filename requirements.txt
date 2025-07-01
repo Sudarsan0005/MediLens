@@ -1,0 +1,17 @@
+grpcio-tools
+pymilvus
+langchain
+python-multipart
+fastapi
+pysqlite3-binary
+mysql-connector-python
+unstructured[all-docs]
+langchain
+langchain-community
+langchain-openai
+langchain-groq
+python_dotenv
+langchain-nvidia-ai-endpoints
+langchain_milvus
+langchain_huggingface
+protobuf==3.20.0
